@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Page Not Found</title>
+    <title>Página não encontrada</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
 
@@ -12,7 +12,8 @@
         }
 
         html {
-            color: #888;
+            background: #47bdaf;
+            color: #005a82;
             display: table;
             font-family: sans-serif;
             height: 100%;
@@ -26,15 +27,50 @@
             margin: 2em auto;
         }
 
+        #shadow {
+            position: relative;
+            -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+            -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+            box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+            padding: 10px;
+            background: white;
+            margin: 15px;
+        }
+
+        #shadow img {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            width: 100%;
+            z-index: -5; /* hide shadow behind image */
+        }
+
+        #shadow::after {
+            content: '';
+            position: absolute;
+            z-index: -10; /* hide shadow behind image */
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); 
+            width: 90%; 
+            left: 5%; /* one half of the remaining 30% */
+            height: 100px;
+            bottom: 0;
+        }
+
         h1 {
-            color: #555;
+            color: #82001e;
             font-size: 2em;
             font-weight: 400;
+            z-index: -1; /* hide shadow behind image */
         }
 
         p {
             margin: 0 auto;
             width: 280px;
+            z-index: -1; /* hide shadow behind image */
+        }
+        
+        a,
+        a:visited {
+            color: #005a82;
+            text-decoration: underline;
         }
 
         @media only screen and (max-width: 280px) {
@@ -44,7 +80,7 @@
             }
 
             h1 {
-                font-size: 1.5em;
+                font-size: 0.5em;
                 margin: 0 0 0.3em;
             }
 
@@ -53,8 +89,14 @@
     </style>
 </head>
 <body>
-    <h1>Page Not Found</h1>
-    <p>Sorry, but the page you were trying to view does not exist.</p>
+    <div id="shadow">
+        <img src="../img/vinho_derramado.jpg" />
+        <h1>A festa não pode parar!</h1>
+        <p>A página solicitada não existe!</p>
+        <p>
+            <a href="/">Precisa de algo específico? Conte com nossa equipe!</a>
+        </p>
+    </div>
 </body>
 </html>
 <!-- IE needs 512+ bytes: https://blogs.msdn.microsoft.com/ieinternals/2010/08/18/friendly-http-error-pages/ -->
