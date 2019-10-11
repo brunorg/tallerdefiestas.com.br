@@ -47,7 +47,7 @@
 	<link rel="stylesheet" href="css/style.css?2" class="embed">
 
 </head>
-<body class="to-animate fadeIn animated">
+<body>
 	<!--[if lte IE 9]>
 		<h1>Oh Oh! Você acessou o nosso site usando um navegador <strong>antigo</strong>.</h1>
 		<p>Por favor <a href="https://browsehappy.com/">atualize seu navegador</a> para uma experiência melhor e mais segurança.</p>
@@ -57,18 +57,46 @@
 		<div></div>
 		<div></div>
 	</section>
-	<article id="content">
+	<nav>
+		<a href="/buffets/">Festas</a> |
+		<a href="/encomendas/">Doces & Salgados</a> |
+		<a href="/coffee/">Coffee Break</a> |
+		<a href="/local/">Localização</a> |
+		<a href="/contato/">Contato</a> |
+		<a href="/sobre/">Sobre nós</a>
+	</nav>
+	<article class="to-animate fadeIn animated" id="content">
 		<div class="row">
 			<h1 class="to-animate fadeInUp animated">Taller de Fiestas</h1>
 			<h2 class="to-animate fadeInUp animated">Curta o momento com seus <span>convidados</span></h2>
 		</div>
 
-		<script type="text/javascript">
-			for (var i = 0; i < 50; i++) {
-				document.write('<h1>Testando parallax ' + i +  '</h1>');
-			}
+		<div class="row">
+			<ul class="bottons">
+				<li>
+					<a href="/buffets/">
+						<div></div>
+						<img src="img/Festas.jpeg">
+						<p>Festas</p>
+					</a>
+				</li>
+				<li>
+					<a href="/encomendas/">
+						<div></div>
+						<img src="img/Salgados.jpeg">
+						<p>Doces & Salgados</p>
+					</a>
+				</li>
+				<li>
+					<a href="/coffee/">
+						<img src="img/Coffee.jpeg">
+						<p>Coffee Break</p>
+					</a>
+				</li>
+			</ul>
+		</div>
 
-		</script>
+
 	</article>
 	
 	<li>

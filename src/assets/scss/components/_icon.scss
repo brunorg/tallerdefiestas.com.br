@@ -1,0 +1,48 @@
+///
+/// Dimension by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Icon */
+
+	.icon {
+		@include icon;
+		border-bottom: none;
+		position: relative;
+
+		> .label {
+			display: none;
+		}
+	}
+
+	.brigadeiro {
+		display: block;
+		width: 60px;
+		height: 65px;
+		margin: 12px;
+		background-size: 60px 65px;
+		background-image: url('../../images/brigadeiro.svg');
+	}
+
+	.no-svg .brigadeiro {
+		background-image: url('../../images/brigadeiro.png');
+	}
+
+	@include breakpoint(small) {
+		.brigadeiro {
+			margin: 8px;
+			width: 48px;
+			height: 52px;
+			background-size: 48px 52px;
+		}	
+	}
+
+	@include breakpoint(xxsmall) {
+		.brigadeiro {
+			margin: 7px;
+			width: 45px;
+			height: 50px;
+			background-size: 45px 50px;
+		}
+	}
